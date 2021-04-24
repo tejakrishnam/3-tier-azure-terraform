@@ -178,3 +178,21 @@ variable "environment" {
     description = "The environment name to be provided"
     default = ""
 }
+
+# Azure Connection variables
+variable "client_secret" {
+  description = "Azure Client Secret"
+  type        = string
+}
+
+# Azure Connection variables
+variable "client_id" {
+  description = "Azure Client Id"
+  type        = string
+}
+
+# Azure Connection variables
+variable "tenant_id" {
+  description = "Azure Tenant Id"
+  type        = string
+}

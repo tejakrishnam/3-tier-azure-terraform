@@ -33,3 +33,28 @@ module "Resources" {
     environment                              = "${var.environment}"
       
 }
+
+# KeyVault Reference
+data "azurerm_key_vault" "kv" {
+  name                = "3tier-kv"
+  resource_group_name = "${var.resource_group_name}"
+}
+
+# KeyVault Secrets
+resource "azurerm_key_vault_secret" "client_id" {
+  name         = "${var.environment_prefix}-sauser"
+  value        = random_string.sauser.result
+  key_vault_id = data.azurerm_key_vault.kv.id
+}
+
+resource "azurerm_key_vault_secret" "client_secret" {
+  name         = "${var.environment_prefix}-sapwd"
+  value        = random_password.sapwd.result
+  key_vault_id = data.azurerm_key_vault.kv.id
+}
+
+resource "azurerm_key_vault_secret" "tenant_id" {
+  name         = "${var.environment_prefix}-sauser"
+  value        = random_password.sapwd.result
+  key_vault_id = data.azurerm_key_vault.kv.id
+}
