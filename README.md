@@ -35,6 +35,11 @@ Currently, used terraform.tfvars file looks as shown below:
 # Name for the environment
 environment                              = "development"
 
+# client id and secret details
+client_id                                = "00000000-0000-0000-0000-000000000000"
+client_secret                            =  "*******"
+tenant_id                                = "10000000-2000-3000-4000-500000000000"
+
 # Parameter for Creating Azure Resources
 region                                   = "Southeast Asia"
 resource_group_name                      = "sanetwork"
