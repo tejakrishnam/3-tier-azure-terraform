@@ -1,8 +1,8 @@
 # Azure Terraform Three Tier environment
 
-This repository allows you to deploy a 3 tier architecture infrastructure environment. 
+This repository allows you to deploy all the resources for a 3 tier architecture infrastructure environment. 
 
-three tier resources: Build and Deploy baseline state with network component 
+Three tier resources: Build and Deploy baseline state with network components specified below as Azure resources.
  
 ##### folder structure of the repo
 Below snapshot provide folder structure of terraform scripts.  
@@ -18,6 +18,7 @@ Below snapshot provide folder structure of terraform scripts.
     * Route table association
     * VNET peering 
     * resource-layer (main layer)
+    * Key Vault
 
 #### Execution Steps
 Assuming you are in three-tier-resources folder path :
